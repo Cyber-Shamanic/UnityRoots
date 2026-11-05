@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1427">
+  <meta name="description" content="UnityRoots — בית דיגיטלי של מורשת, אחדות, מידות, ברכות ויצירה עבור עם ישראל.">
+  <title>עם ישראל · UnityRoots</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">דלג לתוכן הראשי</a>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar" aria-label="תפריט ניווט">
+      <div class="brand"><div class="brand-mark" aria-hidden="true">✦</div><div><div class="brand-he">עַם יִשְׂרָאֵל</div><div class="brand-en">UNITYROOTS <span>UR</span></div></div></div>
+      <button class="version" id="versionBtn" title="פתח יומן גרסאות">✧ גרסה 0.0.1 <span>↗</span></button>
+      <div class="side-eyebrow">הספרייה שלנו</div>
+      <nav id="navigation" class="navigation" aria-label="אגפי האתר">
+        <button class="nav-item active" data-view="home" aria-current="page"><span>⌂</span> בית האחדות</button>
+        <button class="nav-item" data-view="gates"><span>✧</span> שבעת שערי הלב</button>
+        <button class="nav-item" data-view="cards"><span>▣</span> קלפי השראה</button>
+        <button class="nav-item" data-view="blessings"><span>♡</span> ברכות ותפילות</button>
+        <button class="nav-item" data-view="heritage"><span>⌛</span> מפת המורשת</button>
+        <button class="nav-item" data-view="gallery"><span>✿</span> גלריית הסמלים</button>
+        <button class="nav-item" data-view="todo"><span>☑</span> יומן משימות</button>
+      </nav>
+      <div class="side-bottom">
+        <p class="verse">״כָּל יִשְׂרָאֵל עֲרֵבִים זֶה בָּזֶה״<small>שבועות ל״ט ע״א</small></p>
+        <button class="side-utility" id="aboutBtn">ⓘ אודות וקרדיטים</button>
+        <button class="side-utility" id="settingsBtn">⚙ הגדרות נגישות</button>
+        <div class="side-credit">© 2026 · AnLoMinus<br>Cyber Shamanic</div>
+      </div>
+    </aside>
+
+    <div class="main-column">
+      <header class="topbar">
+        <div class="topbar-start"><button class="icon-button menu-toggle" id="menuBtn" aria-label="פתח תפריט" aria-expanded="false">☰</button><span class="eyebrow">מקום לשורשים. מרחב לצמיחה.</span></div>
+        <div class="topbar-end"><label class="search-box"><span aria-hidden="true">⌕</span><input id="globalSearch" type="search" placeholder="חיפוש בשערים, בקלפים ובברכות..." aria-label="חיפוש בתכני האתר"><kbd>/</kbd></label><button class="icon-button" id="favoritesBtn" title="היצירות ששמרתי" aria-label="הצג מועדפים">♡</button><button class="avatar" id="aboutAvatar" title="אודות הפרויקט">UR</button></div>
+      </header>
+      <main id="main" tabindex="-1">
+        <div id="appContent" aria-live="polite"></div>
+      </main>
+      <footer class="footer"><span>נבנה באהבה לעם ישראל · UnityRoots v0.0.1</span><span id="footerClock" aria-label="תאריך ושעה בישראל"></span><span>״עולם חסד יבנה״ — תהילים פ״ט, ג׳</span></footer>
+    </div>
+  </div>
+
+  <div class="modal-layer" id="modalLayer" hidden>
+    <div class="modal-scrim" data-close="modal"></div>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+      <header class="modal-header"><div><span class="micro-label">UNITYROOTS STUDIO</span><h2 id="modalTitle"></h2></div><button class="icon-button" data-close="modal" aria-label="סגור חלון">×</button></header>
+      <div class="modal-body" id="modalBody"></div>
+    </section>
+  </div>
+  <div class="toast" role="status" id="toast" aria-live="polite"></div>
+</body>
+</html>
