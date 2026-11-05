@@ -5,7 +5,7 @@ const root=resolve(import.meta.dirname);
 const target=join(root,'dist');
 // No nested assets directory: all website files, including images and fonts,
 // are authored and served from the root as explicitly requested.
-const webFiles=['index.html','styles.css','app.js','chapters.js','vault.js','zip.js','CHANGELOG.md','TODO.md','PROJECT_SUMMARY.md'];
+const webFiles=['index.html','styles.css','app.js','royal-art.js','chapters.js','vault.js','zip.js','CHANGELOG.md','TODO.md','PROJECT_SUMMARY.md','README.md'];
 for(const entry of await readdir(root,{withFileTypes:true})){
   if(entry.isFile()&&/\.(png|ttf|zip)$/i.test(entry.name))webFiles.push(entry.name);
 }
